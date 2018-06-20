@@ -1,9 +1,15 @@
-from . label_format import LabelFormat
-from . label_size import LabelSize
-from . paper_size import PaperSize
-from . label_sheet import LabelSheet
+"""
+The Labeler package.
 
-from . label_formats import *
-from . paper_sizes import *
-from . label_sizes import *
-from . label_sheets import *
+Generate PDF files for printing tiled labels.
+"""
+
+from .label_format import LabelFormat  # NOQA
+from .label_size import LabelSize  # NOQA
+from .paper_size import PaperSize  # NOQA
+from .label_sheet import LabelSheet  # NOQA
+
+from .label_formats import *  # NOQA
+from .paper_sizes import *  # NOQA
+from .label_sizes import *  # NOQA
+from .label_sheets import *  # NOQA
