@@ -2,7 +2,7 @@
 
 __title__ = 'labeler'
 __description__ = 'Generate labels as printable PDFs.'
-__url__ = 'http://github.com/axevalley/labeler.git'
+__url__ = 'http://github.com/lukeshiner/labeler.git'
 __version__ = '0.1'
 __author__ = 'Luke Shiner'
 __author_email__ = 'luke@lukeshiner.com'
