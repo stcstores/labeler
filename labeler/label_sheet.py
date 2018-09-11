@@ -96,21 +96,21 @@ class LabelSheet:
                 Draw the border of the label. Usefull for testing.
 
         """
-        self.paper_size = kwargs.get('paper_size', self.paper_size)
-        self.label_size = kwargs.get('label_size', self.label_size)
-        self.label_format = kwargs.get('label_format', self.label_format)
-        self.left_margin = kwargs.get('left_margin', self.left_margin)
-        self.right_margin = kwargs.get('right_margin', self.right_margin)
-        self.top_margin = kwargs.get('top_margin', self.top_margin)
-        self.bottom_margin = kwargs.get('bottom_margin', self.bottom_margin)
-        self.left_padding = kwargs.get('left_padding', self.left_padding)
-        self.right_padding = kwargs.get('right_padding', self.right_padding)
-        self.top_padding = kwargs.get('top_padding', self.top_padding)
-        self.bottom_padding = kwargs.get('bottom_padding', self.bottom_padding)
-        self.corner_radius = kwargs.get('corner_radius', self.corner_radius)
-        self.border = kwargs.get('border', self.border)
-        self.columns = kwargs.get('columns', self.columns)
-        self.rows = kwargs.get('rows', self.rows)
+        self.paper_size = kwargs.get("paper_size", self.paper_size)
+        self.label_size = kwargs.get("label_size", self.label_size)
+        self.label_format = kwargs.get("label_format", self.label_format)
+        self.left_margin = kwargs.get("left_margin", self.left_margin)
+        self.right_margin = kwargs.get("right_margin", self.right_margin)
+        self.top_margin = kwargs.get("top_margin", self.top_margin)
+        self.bottom_margin = kwargs.get("bottom_margin", self.bottom_margin)
+        self.left_padding = kwargs.get("left_padding", self.left_padding)
+        self.right_padding = kwargs.get("right_padding", self.right_padding)
+        self.top_padding = kwargs.get("top_padding", self.top_padding)
+        self.bottom_padding = kwargs.get("bottom_padding", self.bottom_padding)
+        self.corner_radius = kwargs.get("corner_radius", self.corner_radius)
+        self.border = kwargs.get("border", self.border)
+        self.columns = kwargs.get("columns", self.columns)
+        self.rows = kwargs.get("rows", self.rows)
 
     def generate_PDF_from_data(self, data):
         """Return generated labels as a reportlab.pdfgen.canvas.Canvas."""
@@ -129,7 +129,8 @@ class LabelSheet:
             right_padding=self.right_padding,
             top_padding=self.top_padding,
             bottom_padding=self.bottom_padding,
-            corner_radius=self.corner_radius)
+            corner_radius=self.corner_radius,
+        )
 
         def draw_label(label, width, height, lines):
             label_format = self.label_format(width=width, height=height)
