@@ -13,6 +13,9 @@ class PaperSize:
 
     """
 
+    width = 210
+    height = 297
+
     def __init__(self, **kwargs):
         """
         Create a paper size.
@@ -24,5 +27,5 @@ class PaperSize:
                 The height of the label.
 
         """
-        self.width = kwargs.get('width', self.width)
-        self.height = kwargs.get('height', self.height)
+        self.width = kwargs.get("width", self.width)
+        self.height = kwargs.get("height", self.height)

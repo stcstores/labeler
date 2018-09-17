@@ -8,3 +8,10 @@ class A4(PaperSize):
 
     width = 210
     height = 297
+
+
+class Thermal6x4Paper(PaperSize):
+    """Paper size for 6x4 inch thermal address labels."""
+
+    width = 152.4
+    height = 101.6

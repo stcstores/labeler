@@ -9,7 +9,7 @@ from .label_format import LabelFormat
 class DefaultLabelFormat(LabelFormat):
     """Labeler's default label format."""
 
-    font = 'Helvetica-Bold'
+    font = "Helvetica-Bold"
     vertical_margin = 10
     horizontal_margin = 5
     max_font_size = 18
@@ -27,7 +27,7 @@ class DefaultLabelFormat(LabelFormat):
         """Wrap the text if necessary."""
         if line_length < len(text):
             return [text]
-        split_index = text[:line_length].rfind(' ')
+        split_index = text[:line_length].rfind(" ")
         return [text[:split_index], text[split_index:]]
 
 
@@ -46,7 +46,9 @@ class BarcodeLabelFormat(DefaultLabelFormat):
                     line,
                     fontSize=8,
                     fontName=self.font,
-                    textAnchor=self.text_anchor))
+                    textAnchor=self.text_anchor,
+                )
+            )
             vertical_location -= 10
         x_location = 15
         y_location = 25
@@ -54,5 +56,31 @@ class BarcodeLabelFormat(DefaultLabelFormat):
         barcode = lines[0]
         bar_height = self.height * 0.5
         barcode_drawing = widget_class(
-            barcode, x=x_location, y=y_location, barHeight=bar_height)
+            barcode, x=x_location, y=y_location, barHeight=bar_height
+        )
         label.add(barcode_drawing)
+
+
+class AddressLabelFormat(LabelFormat):
+    """Labeler's default label format."""
+
+    font = "Helvetica-Bold"
+    vertical_margin = 40
+    horizontal_margin = 20
+    max_font_size = 48
+
+    def get_text_height(self):
+        """Return the height of the text in ponts."""
+        return self.max_font_size
+
+    def get_horizontal_location(self):
+        """Return the horizontal position of the text in ponts."""
+        return self.width / 2
+
+    def get_line_gap(self, lines):
+        """Return the gap between each line of text."""
+        available_height = self.get_usable_height()
+        text_height = self.get_text_height()
+        remaining_space_after_text = available_height - (text_height * len(lines))
+        line_gap = int(remaining_space_after_text / len(lines))
+        return text_height + line_gap

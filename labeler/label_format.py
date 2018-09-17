@@ -41,7 +41,7 @@ class LabelFormat:
     vertical_margin = 0
     horizontal_margin = 0
     max_font_size = 0
-    text_anchor = 'middle'
+    text_anchor = "middle"
 
     def __init__(self, **kwargs):
         """
@@ -68,15 +68,13 @@ class LabelFormat:
                 the font size will be the largest that can fit.
 
         """
-        self.font = kwargs.get('font', self.font)
-        self.width = kwargs.get('width', self.width)
-        self.height = kwargs.get('height', self.height)
-        self.vertical_margin = kwargs.get(
-            'vertical_margin', self.vertical_margin)
-        self.horizontal_margin = kwargs.get(
-            'horizontal_margin', self.horizontal_margin)
-        self.max_font_size = kwargs.get('max_font_size', self.max_font_size)
-        self.text_anchor = kwargs.get('text_anchor', self.text_anchor)
+        self.font = kwargs.get("font", self.font)
+        self.width = kwargs.get("width", self.width)
+        self.height = kwargs.get("height", self.height)
+        self.vertical_margin = kwargs.get("vertical_margin", self.vertical_margin)
+        self.horizontal_margin = kwargs.get("horizontal_margin", self.horizontal_margin)
+        self.max_font_size = kwargs.get("max_font_size", self.max_font_size)
+        self.text_anchor = kwargs.get("text_anchor", self.text_anchor)
 
     def get_text_height(self):
         """
@@ -84,7 +82,7 @@ class LabelFormat:
 
         Sub-classes must implement this to set the height of the text.
         """
-        raise NotImplementedError
+        raise NotImplementedError()
 
     def get_horizontal_location(self):
         """
@@ -138,5 +136,7 @@ class LabelFormat:
                     line,
                     fontSize=font_size,
                     fontName=self.font,
-                    textAnchor=self.text_anchor))
+                    textAnchor=self.text_anchor,
+                )
+            )
             vertical_location = vertical_location + self.get_line_gap(lines)
