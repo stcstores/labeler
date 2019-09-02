@@ -90,9 +90,9 @@ class SmallLabelFormat(LabelFormat):
     """Format for generic text on a small label."""
 
     font = "Helvetica-Bold"
-    vertical_margin = 20
-    horizontal_margin = 20
-    max_font_size = 12
+    vertical_margin = 10
+    horizontal_margin = 5
+    max_font_size = 18
 
     def get_horizontal_location(self):
         """Return the horizontal position of the text in ponts."""
