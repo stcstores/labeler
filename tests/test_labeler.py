@@ -61,3 +61,32 @@ def test_address_label_format(tmpdir):
     canvas = sheet.generate_PDF_from_data(data)
     canvas._filename = str(Path(tmpdir / "test.pdf"))
     canvas.save()
+
+
+def test_small_label_format(tmpdir):
+    data = [
+        ["UK 12", "Pink Cat Slipper", "FW987"],
+        ['38" Regular Tall', "Grey Shoulders, Blue Body", "45632"],
+        ["Medium", "Grey", "64535"],
+        ["UK 12", "Pink Cat Slipper", "FW987"],
+        ['38" Regular Tall', "Grey Shoulders, Blue Body", "45632"],
+        ["Medium", "Grey", "64535"],
+        ['38" Regular Tall', "Grey Shoulders, Blue Body", "45632"],
+        ["Medium", "Grey", "64535"],
+        [
+            '38" Regular Tall',
+            "Grey Shoulders, Blue Body",
+            "45632",
+            "more words",
+            "and some more",
+            "and more",
+            "and more",
+        ],
+        ["86759", "PAW PATROL SKYE"],
+    ]
+
+    label_format = labeler.SmallLabelFormat
+    sheet = labeler.STW046025PO(label_format=label_format)
+    canvas = sheet.generate_PDF_from_data(data)
+    canvas._filename = str(Path(tmpdir / "test.pdf"))
+    canvas.save()
