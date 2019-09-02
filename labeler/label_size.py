@@ -12,6 +12,7 @@ class LabelSize:
             The height of the label.
 
     """
+
     width = 0
     height = 0
 
@@ -26,5 +27,5 @@ class LabelSize:
                 The height of the label.
 
         """
-        self.width = kwargs.get('width', self.width)
-        self.height = kwargs.get('height', self.height)
+        self.width = kwargs.get("width", self.width)
+        self.height = kwargs.get("height", self.height)
