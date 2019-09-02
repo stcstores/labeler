@@ -84,3 +84,29 @@ class AddressLabelFormat(LabelFormat):
         remaining_space_after_text = available_height - (text_height * len(lines))
         line_gap = int(remaining_space_after_text / len(lines))
         return text_height + line_gap
+
+
+class SmallLabelFormat(LabelFormat):
+    """Format for generic text on a small label."""
+
+    font = "Helvetica-Bold"
+    vertical_margin = 20
+    horizontal_margin = 20
+    max_font_size = 12
+
+    def get_horizontal_location(self):
+        """Return the horizontal position of the text in ponts."""
+        return self.width / 2
+
+    def get_text_height(self):
+        """Return the height of the text in ponts."""
+        return self.max_font_size
+
+    def get_line_gap(self, lines):
+        """Return the gap between each line of text."""
+        available_height = self.get_usable_height()
+        text_height = self.get_text_height()
+        remaining_space_after_text = available_height - (text_height * len(lines))
+        line_gap = int(remaining_space_after_text / len(lines))
+        total_line_height = text_height + line_gap
+        return total_line_height
