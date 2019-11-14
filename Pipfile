@@ -11,6 +11,11 @@ e1839a8 = {path = ".",editable = true}
 [dev-packages]
 pytest = "*"
 tox = "*"
+flake8 = "*"
+flake8-docstrings = "*"
+black = {git = "https://github.com/psf/black.git",ref = "master",editable = true}
+pytest-cov = "*"
+coveralls = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.8"
