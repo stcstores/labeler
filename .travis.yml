@@ -4,15 +4,14 @@ language: python
 python:
   - "3.6"
   - "3.7"
-  - "3.8-dev"
+  - "3.8"
 # command to install dependencies
 install:
   - make init
 # command to run tests
 script:
   - make test
-  - make coverage
   - coveralls
 notifications:
   email:
-    - luke@lukeshiner.co.uk
+    - luke@stcstores.co.uk
