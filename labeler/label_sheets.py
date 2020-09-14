@@ -40,3 +40,21 @@ class ThermalAddressLabel4x6Sheet(LabelSheet):
     right_padding = 0
     padding_top = 0
     padding_bottom = 0
+
+
+class BayLabelSheet(LabelSheet):
+    """Label sheet preset for A4 2x8 labels."""
+
+    paper_size = paper_sizes.A4
+    label_size = LabelSize(width=100, height=34)
+    columns = 2
+    rows = 8
+    left_margin = 5
+    right_margin = 5
+    top_margin = 3
+    bottom_margin = 3
+    corner_radius = 2
+    left_padding = 0
+    right_padding = 0
+    padding_top = 0
+    padding_bottom = 0
