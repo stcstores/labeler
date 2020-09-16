@@ -51,8 +51,8 @@ class BayLabelSheet(LabelSheet):
     rows = 8
     left_margin = 5
     right_margin = 5
-    top_margin = 3
-    bottom_margin = 3
+    top_margin = 15
+    bottom_margin = 0
     corner_radius = 2
     left_padding = 0
     right_padding = 0
