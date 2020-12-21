@@ -20,10 +20,6 @@ classifiers = [
     "Topic :: Other/Nonlisted Topic",
 ]
 
-[tool.coverage.run]
-branch = true
-omit = ["tests/*",]
-
 [tool.poetry.dependencies]
 python = "^3.6"
 reportlab = "^3.5.34"
