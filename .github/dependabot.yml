@@ -1,21 +1,11 @@
 version: 2
 updates:
-- package-ecosystem: pip
-  directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-  assignees:
-  - lukeshiner
-  versioning-strategy: lockfile-only
-  ignore:
-  - dependency-name: reportlab
-    versions:
-    - 3.5.62
-    - 3.5.63
-    - 3.5.64
-    - 3.5.66
-  - dependency-name: tox
-    versions:
-    - 3.21.4
-    - 3.22.0
+  - package-ecosystem: pip
+    insecure-external-code-execution: allow
+    directory: "/"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    assignees:
+      - lukeshiner
+    versioning-strategy: auto
