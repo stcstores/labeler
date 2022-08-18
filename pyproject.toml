@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "labeler"
-version = "0.1.0"
+version = "0.1.1"
 description = "Easily create PDF documents for printing on label paper"
 authors = ["Luke Shiner <luke@lukeshiner.com>"]
 license = "MIT"
