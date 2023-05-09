@@ -24,7 +24,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7,<4.0"
-reportlab = ">=3.6.8,<4.0"
+reportlab = ">=3.6.8,<5.0"
 pylabels = ">=1.2.1"
 
 
