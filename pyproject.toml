@@ -13,6 +13,7 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Development Status :: 4 - Beta",
@@ -32,7 +33,6 @@ pytest = ">=7.0.1"
 flake8 = ">=5.0.4"
 black = ">=22.6"
 pytest-cov = ">=3.0.0"
-coveralls = ">=3.3.1"
 isort = ">=5.10.1"
 flake8-docstrings = ">=1.6.0"
 
