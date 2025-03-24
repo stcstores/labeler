@@ -28,13 +28,14 @@ reportlab = ">=3.6.8"
 pylabels = ">=1.2.1"
 
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = ">=7.0.1"
 flake8 = ">=5.0.4"
 black = ">=22.6"
 pytest-cov = ">=3.0.0"
 isort = ">=5.10.1"
 flake8-docstrings = ">=1.6.0"
+flake8-bugbear = ">=24.12.12"
 
 [build-system]
 requires = ["poetry-core"]
